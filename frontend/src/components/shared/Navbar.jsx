@@ -87,7 +87,7 @@ const Navbar = () => {
                     src={
                       user?.profile?.profilePhoto
                         ? user.profile.profilePhoto
-                        : "/public/profiledefault.svg"
+                        : "/profiledefault.svg"
                     }
                     alt="@shadcn"
                   />
