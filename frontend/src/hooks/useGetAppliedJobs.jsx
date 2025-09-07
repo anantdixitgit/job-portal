@@ -11,7 +11,7 @@ const useGetAppliedJobs = () => {
     const fetchAppliedJobs = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/v1/application/appliedJobs`,
+          `https://job-portal-c99b.onrender.com/api/v1/application/appliedJobs`,
           { withCredentials: true }
         );
         console.log("value of all applied jobs are :", res);

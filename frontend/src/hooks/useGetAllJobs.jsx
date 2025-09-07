@@ -11,9 +11,12 @@ const useGetAllJobs = () => {
   useEffect(() => {
     const fetchAllJobs = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/v1/job/get`, {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          `https://job-portal-c99b.onrender.com/api/v1/job/get`,
+          {
+            withCredentials: true,
+          }
+        );
         //console.log("the response of finding latest job in usegetalljobs", res);
         if (res.data.success) {
           dispatch(setAllJobs(res.data.jobs));

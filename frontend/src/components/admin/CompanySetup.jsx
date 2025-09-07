@@ -49,7 +49,7 @@ const CompanySetup = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `http://localhost:5000/api/v1/company/update/${params.id}`,
+        `https://job-portal-c99b.onrender.com/api/v1/company/update/${params.id}`,
         formData,
         {
           headers: {

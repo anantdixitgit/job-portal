@@ -31,7 +31,7 @@ const Login = () => {
     try {
       dispatch(setLoading(true));
       const res = await axios.post(
-        "http://localhost:5000/api/v1/user/login",
+        "https://job-portal-c99b.onrender.com/api/v1/user/login",
         input,
         {
           headers: {

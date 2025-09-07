@@ -10,7 +10,7 @@ const useGetAllAdminJobs = () => {
     const fetchAllAdminJobs = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/v1/job/getadminjobs`,
+          `https://job-portal-c99b.onrender.com/api/v1/job/getadminjobs`,
           {
             withCredentials: true,
           }

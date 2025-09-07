@@ -11,7 +11,7 @@ const useGetCompanyById = (companyId) => {
     const fetchSingleCompany = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/v1/company/get/${companyId}`,
+          `https://job-portal-c99b.onrender.com/api/v1/company/get/${companyId}`,
           { withCredentials: true }
         );
         console.log(
