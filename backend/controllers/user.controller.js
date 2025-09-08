@@ -65,9 +65,11 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password, role } = req.body;
-    console.log("[LOGIN] Incoming login request:", { email, role });
-    console.log("[LOGIN] Request headers:", req.headers);
-    console.log("[LOGIN] Request origin:", req.headers.origin);
+  console.log("[LOGIN] Incoming login request:", { email, role });
+  console.log("[LOGIN] Request headers:", req.headers);
+  console.log("[LOGIN] Request origin:", req.headers.origin);
+  // Log cookies sent by client
+  console.log("[LOGIN] Cookies sent by client:", req.cookies);
 
     if (!email || !password || !role) {
       console.log("[LOGIN] Missing fields");
@@ -114,16 +116,17 @@ export const login = async (req, res) => {
       sameSite: "none",
     };
     console.log("[LOGIN] Setting cookie with options:", options);
-    const response = res
-      .status(200)
-      .cookie("token", token, options)
-      .json({
-        message: `welcome back ${loggedInUser.fullname}`,
-        loggedInUser,
-        success: true,
-      });
-    console.log("[LOGIN] Response sent, check browser for cookie");
-    return response;
+    // Set cookie and send response
+    res.cookie("token", token, options);
+    // Log response headers after setting cookie
+    console.log("[LOGIN] Response headers after setting cookie:", res.getHeaders());
+    res.status(200).json({
+      message: `welcome back ${loggedInUser.fullname}`,
+      loggedInUser,
+      success: true,
+    });
+    console.log("[LOGIN] Response sent, check browser for Set-Cookie header");
+    return;
   } catch (error) {
     console.log("[LOGIN] Error:", error);
     res.status(500).json({
@@ -142,10 +145,14 @@ export const logout = async (req, res) => {
       secure: true,
       sameSite: "none",
     };
-    return res.status(200).cookie("token", "", options).json({
+    res.cookie("token", "", options);
+    console.log("[LOGOUT] Response headers after clearing cookie:", res.getHeaders());
+    res.status(200).json({
       message: "logout successfully",
       success: true,
     });
+    console.log("[LOGOUT] Response sent, check browser for Set-Cookie header");
+    return;
   } catch (error) {
     console.log(error);
   }
