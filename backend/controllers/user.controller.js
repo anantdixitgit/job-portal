@@ -65,11 +65,11 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password, role } = req.body;
-  console.log("[LOGIN] Incoming login request:", { email, role });
-  console.log("[LOGIN] Request headers:", req.headers);
-  console.log("[LOGIN] Request origin:", req.headers.origin);
-  // Log cookies sent by client
-  console.log("[LOGIN] Cookies sent by client:", req.cookies);
+    console.log("[LOGIN] Incoming login request:", { email, role });
+    console.log("[LOGIN] Request headers:", req.headers);
+    console.log("[LOGIN] Request origin:", req.headers.origin);
+    // Log cookies sent by client
+    console.log("[LOGIN] Cookies sent by client:", req.cookies);
 
     if (!email || !password || !role) {
       console.log("[LOGIN] Missing fields");
@@ -119,7 +119,10 @@ export const login = async (req, res) => {
     // Set cookie and send response
     res.cookie("token", token, options);
     // Log response headers after setting cookie
-    console.log("[LOGIN] Response headers after setting cookie:", res.getHeaders());
+    console.log(
+      "[LOGIN] Response headers after setting cookie:",
+      res.getHeaders()
+    );
     res.status(200).json({
       message: `welcome back ${loggedInUser.fullname}`,
       loggedInUser,
@@ -146,7 +149,10 @@ export const logout = async (req, res) => {
       sameSite: "none",
     };
     res.cookie("token", "", options);
-    console.log("[LOGOUT] Response headers after clearing cookie:", res.getHeaders());
+    console.log(
+      "[LOGOUT] Response headers after clearing cookie:",
+      res.getHeaders()
+    );
     res.status(200).json({
       message: "logout successfully",
       success: true,
