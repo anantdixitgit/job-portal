@@ -65,8 +65,12 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password, role } = req.body;
+    console.log("[LOGIN] Incoming login request:", { email, role });
+    console.log("[LOGIN] Request headers:", req.headers);
+    console.log("[LOGIN] Request origin:", req.headers.origin);
 
     if (!email || !password || !role) {
+      console.log("[LOGIN] Missing fields");
       return res.status(400).json({
         message: "something is missing",
         success: false,
@@ -75,6 +79,7 @@ export const login = async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
+      console.log("[LOGIN] User not found");
       return res.status(400).json({
         message: "Incorrect email or password",
         success: false,
@@ -84,6 +89,7 @@ export const login = async (req, res) => {
     const isPasswordMatch = await user.isPasswordCorrect(password);
 
     if (!isPasswordMatch) {
+      console.log("[LOGIN] Password mismatch");
       return res.status(400).json({
         message: "Incorrect email or password",
         success: false,
@@ -91,6 +97,7 @@ export const login = async (req, res) => {
     }
 
     if (role !== user.role) {
+      console.log("[LOGIN] Role mismatch");
       return res.status(400).json({
         message: "account not exist with current role",
         success: false,
@@ -106,16 +113,19 @@ export const login = async (req, res) => {
       secure: true,
       sameSite: "none",
     };
-
-    return res
+    console.log("[LOGIN] Setting cookie with options:", options);
+    const response = res
       .status(200)
       .cookie("token", token, options)
       .json({
-        message: `welcome back ${loggedInUser.fullname}`, //change here future ref other wise wrong
+        message: `welcome back ${loggedInUser.fullname}`,
         loggedInUser,
         success: true,
       });
+    console.log("[LOGIN] Response sent, check browser for cookie");
+    return response;
   } catch (error) {
+    console.log("[LOGIN] Error:", error);
     res.status(500).json({
       error,
       message: "internal  server error",
