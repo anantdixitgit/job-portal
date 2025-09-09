@@ -16,19 +16,19 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center bg-gradient-to-r from-cyan-50 via-teal-50 to-blue-50 min-h-[60vh]">
       <div className="flex flex-col gap-5 my-10">
-        <span className=" mx-auto px-4 py-2 rounded-full bg-gray-100 text-[#F83002] font-medium">
+        <span className="mx-auto px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 font-medium shadow">
           No. 1 Job Hunt Website
         </span>
-        <h1 className="text-5xl font-bold text-gray-900">
+        <h1 className="text-5xl font-bold text-teal-700 drop-shadow-lg">
           Search, Apply & <br /> Get Your{" "}
-          <span className="text-[#16A34A]">Dream Jobs</span>
+          <span className="text-cyan-600">Dream Jobs</span>
         </h1>
-        <p className="text-gray-500">
+        <p className="text-gray-500 italic">
           Best platform to find your dream job and boost your career. Explore
         </p>
-        <div className="  flex w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto">
+        <div className="flex w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto bg-white/80">
           <input
             type="text"
             placeholder="Find your dream jobs"
@@ -37,7 +37,7 @@ const HeroSection = () => {
           />
           <Button
             onClick={searchJobHandler}
-            className="rounded-r-full bg-[#16A34A] hover:bg-[#166534]"
+            className="rounded-r-full bg-teal-600 hover:bg-teal-700"
           >
             <Search className="h-5 w-5" />
           </Button>

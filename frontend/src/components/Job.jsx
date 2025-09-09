@@ -17,26 +17,32 @@ const Job = ({ job }) => {
   };
 
   return (
-    <div className="p-5 rounded-md shadow-xl bg-white border border-gray-100">
+    <div className="p-5 rounded-md shadow-xl bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50 border border-cyan-100">
       <div className="flex items-center justify-between">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-teal-600">
           {daysAgoFunction(job?.createdAt) === 0
             ? "Today"
             : `${daysAgoFunction(job?.createdAt)} days ago`}
         </p>
-        <Button variant="outline" className="rounded-full" size="icon">
+        <Button
+          variant="outline"
+          className="rounded-full hover:bg-cyan-100"
+          size="icon"
+        >
           <Bookmark />
         </Button>
       </div>
 
       <div className="flex items-center gap-2 my-2">
-        <Button className="p-6" variant="outline" size="icon">
+        <Button className="p-6 hover:bg-teal-100" variant="outline" size="icon">
           <Avatar>
             <AvatarImage src={job?.company?.logo} />
           </Avatar>
         </Button>
         <div>
-          <h1 className="font-medium text-lg">{job?.company?.name}</h1>
+          <h1 className="font-medium text-lg text-cyan-700">
+            {job?.company?.name}
+          </h1>
           <p className="text-sm text-gray-500">India</p>
         </div>
       </div>
@@ -46,13 +52,13 @@ const Job = ({ job }) => {
         <p className="text-sm text-gray-600">{job?.description}</p>
       </div>
       <div className="flex items-center gap-2 mt-4">
-        <Badge className={"text-blue-700 font-bold"} variant="ghost">
+        <Badge className={"text-cyan-700 font-bold"} variant="ghost">
           {job?.position} Positions
         </Badge>
-        <Badge className={"text-[#F83002] font-bold"} variant="ghost">
+        <Badge className={"text-teal-600 font-bold"} variant="ghost">
           {job?.jobType}
         </Badge>
-        <Badge className={"text-[#7209b7] font-bold"} variant="ghost">
+        <Badge className={"text-blue-600 font-bold"} variant="ghost">
           {job?.salary}LPA
         </Badge>
       </div>

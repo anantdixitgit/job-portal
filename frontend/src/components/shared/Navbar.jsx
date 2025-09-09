@@ -36,11 +36,11 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="bg-white">
+    <div className="bg-gradient-to-r from-cyan-100 via-teal-100 to-blue-100">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16">
         <div>
-          <h1 className="text-2xl font-bold">
-            Job<span className="text-[#16A34A]">Portal</span>
+          <h1 className="text-2xl font-bold text-teal-700 drop-shadow">
+            Job<span className="text-cyan-600">Portal</span>
           </h1>
         </div>
         <div className="flex items-center gap-12">
