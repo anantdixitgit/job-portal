@@ -1,45 +1,53 @@
-Job Portal Web Application
+# 💼 Job Portal Web Application
 
-Live Demo: job-portal-frontend.mq47.onrender.com
+🚀 **Live Demo**: [Frontend](https://job-portal-frontend.mq47.onrender.com)
 
-A full-stack Job Portal Web Application featuring separate portals for recruiters and applicants. Built using the MERN stack with JWT authentication, Redux for state management, and Cloudinary for media storage.
+A full-stack **Job Portal** built with the **MERN stack**, featuring two separate portals for **Recruiters** and **Applicants**. The application supports secure authentication, file uploads (resumes, images, logos), and complete job management functionality.
 
-Features
-Applicant Portal
+🛠️ **Frontend and Backend are deployed separately on [Render]
 
-Secure login and registration using JWT
+---
 
-Upload profile picture and resume (stored via Cloudinary)
+## ✨ Features
 
-Browse job listings posted by recruiters
+### 👤 Applicant Portal
 
-Apply for jobs and track application status
+- 🔐 JWT-based secure login & registration
+- 📄 Upload profile picture and resume (stored via Cloudinary)
+- 🔍 Browse job listings created by recruiters
+- 📥 Apply to jobs and view application status
 
-Recruiter Portal
+### 🧑‍💼 Recruiter Portal
 
-Secure login and registration using JWT
+- 🔐 JWT-based secure login & registration
+- 🏢 Create and manage a company profile
+- 🖼️ Upload company logo (stored via Cloudinary)
+- 📝 Post, update, and delete job listings
+- 📋 View and manage applicants for posted jobs
 
-Create and manage company profile
+---
 
-Upload company logo (stored via Cloudinary)
+## 🛠️ Tech Stack
 
-Post, update, and delete job listings
+| Layer        | Technologies                                   |
+|--------------|------------------------------------------------|
+| **Frontend** | React, Redux Toolkit                    |
+| **Backend**  | Node.js, Express.js                            |
+| **Database** | MongoDB with Mongoose                          |
+| **Auth**     | JWT (JSON Web Tokens)                          |
+| **Storage**  | Cloudinary (Images, Resumes, Logos)            |
 
-View and manage applicants for each job
+---
 
-Tech Stack
+## 🌐 Deployment
 
-Frontend: React (Vite), Redux
+- **Frontend**: [https://job-portal-frontend.mq47.onrender.com](https://job-portal-frontend.mq47.onrender.com)  
+- **Backend**: Deployed separately on Render (private URL or endpoint if not public)
 
-Backend: Express.js, Node.js
+> ⚙️ **Note**: The frontend communicates with the backend via API calls. Make sure CORS and environment variables are configured properly for production.
 
-Database: MongoDB with Mongoose
+---
 
-Authentication: JWT (JSON Web Tokens)
-
-Storage: Cloudinary (for images, resumes, company logos)
+## 📁 Project Structure
 
 
-Frontend deployed at: https://job-portal-frontend.mq47.onrender.com
-
-Project Structure
