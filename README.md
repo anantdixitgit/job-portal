@@ -48,6 +48,6 @@ A full-stack **Job Portal** built with the **MERN stack**, featuring two separat
 
 ---
 
-## 📁 Project Structure
+
 
 
