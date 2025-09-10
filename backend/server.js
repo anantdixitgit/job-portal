@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 const corsOptions = {
   origin: [
-    "https://job-portal-frontend-mq47.onrender.com",
+    "https://job-portal-eight-tawny.vercel.app/",
     "http://localhost:5173",
     ,
   ],
