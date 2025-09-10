@@ -49,7 +49,7 @@ const CompanySetup = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `https://job-portal-backend-s1dr.onrender.com/api/v1/company/update/${params.id}`,
+        `job-portal-cmjo.vercel.app/api/v1/company/update/${params.id}`,
         formData,
         {
           headers: {

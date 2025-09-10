@@ -17,7 +17,7 @@ const CompanyCreate = () => {
   const registerNewCompany = async () => {
     try {
       const res = await axios.post(
-        `https://job-portal-backend-s1dr.onrender.com/api/v1/company/register`,
+        `job-portal-cmjo.vercel.app/api/v1/company/register`,
         { companyName },
         {
           headers: {

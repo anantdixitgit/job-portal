@@ -30,7 +30,7 @@ const AdminJobsTable = () => {
   const handleDelete = async (jobId) => {
     try {
       const response = await axios.delete(
-        `https://job-portal-backend-s1dr.onrender.com/api/v1/job/deletejob`,
+        `job-portal-cmjo.vercel.app/api/v1/job/deletejob`,
         {
           data: { jobId },
           withCredentials: true,

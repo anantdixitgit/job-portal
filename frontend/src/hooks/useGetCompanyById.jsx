@@ -11,7 +11,7 @@ const useGetCompanyById = (companyId) => {
     const fetchSingleCompany = async () => {
       try {
         const res = await axios.get(
-          `https://job-portal-backend-s1dr.onrender.com/api/v1/company/get/${companyId}`,
+          `job-portal-cmjo.vercel.app/api/v1/company/get/${companyId}`,
           { withCredentials: true }
         );
         console.log(

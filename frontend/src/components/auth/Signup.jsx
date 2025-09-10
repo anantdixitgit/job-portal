@@ -48,7 +48,7 @@ const Signup = () => {
       dispatch(setLoading(true));
 
       const res = await axios.post(
-        "https://job-portal-backend-s1dr.onrender.com/api/v1/user/register",
+        "job-portal-cmjo.vercel.app/api/v1/user/register",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

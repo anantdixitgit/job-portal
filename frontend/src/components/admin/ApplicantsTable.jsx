@@ -24,7 +24,7 @@ const ApplicantsTable = () => {
     try {
       //axios.defaults.withCredentials = true;
       const res = await axios.post(
-        `https://job-portal-backend-s1dr.onrender.com/api/v1/application/status/${id}/update`,
+        `job-portal-cmjo.vercel.app/api/v1/application/status/${id}/update`,
         { status },
         {
           withCredentials: true,
