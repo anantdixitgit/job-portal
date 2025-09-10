@@ -9,6 +9,24 @@ import jobRouter from "./routes/job.route.js";
 import applicationRouter from "./routes/application.route.js";
 
 const app = express();
+// Handle CORS preflight for all routes
+app.options(
+  "*",
+  cors({
+    origin: [
+      "https://job-portal-eight-tawny.vercel.app",
+      "http://localhost:5173",
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-Requested-With",
+      "Accept",
+    ],
+  })
+);
 
 dotenv.config({});
 app.use(express.json());
