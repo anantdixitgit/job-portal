@@ -12,7 +12,7 @@ const useGetAllJobs = () => {
     const fetchAllJobs = async () => {
       try {
         const res = await axios.get(
-          `https://job-portal-c99b.onrender.com/api/v1/job/get`,
+          `https://job-portal-backend-s1dr.onrender.com/api/v1/job/get`,
           {
             withCredentials: true,
           }

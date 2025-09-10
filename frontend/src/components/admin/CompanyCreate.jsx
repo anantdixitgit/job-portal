@@ -17,7 +17,7 @@ const CompanyCreate = () => {
   const registerNewCompany = async () => {
     try {
       const res = await axios.post(
-        `https://job-portal-c99b.onrender.com/api/v1/company/register`,
+        `https://job-portal-backend-s1dr.onrender.com/api/v1/company/register`,
         { companyName },
         {
           headers: {

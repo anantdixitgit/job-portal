@@ -16,7 +16,7 @@ const Applicants = () => {
     const fetchAllApplicants = async () => {
       try {
         const res = await axios.get(
-          `https://job-portal-c99b.onrender.com/api/v1/application/${params.id}/applicants`,
+          `https://job-portal-backend-s1dr.onrender.com/api/v1/application/${params.id}/applicants`,
           { withCredentials: true }
         );
         dispatch(setAllApplicants(res.data.job));

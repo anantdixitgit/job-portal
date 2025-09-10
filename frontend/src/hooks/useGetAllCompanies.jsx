@@ -10,7 +10,7 @@ const useGetAllCompanies = () => {
     const fetchCompanies = async () => {
       try {
         const res = await axios.get(
-          `https://job-portal-c99b.onrender.com/api/v1/company/get`,
+          `https://job-portal-backend-s1dr.onrender.com/api/v1/company/get`,
           { withCredentials: true }
         );
         if (res.data.success) {
