@@ -142,7 +142,15 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
   try {
-    return res.status(200).cookie("token", "", { maxAge: 0 }).json({
+    // Clear cookie for all possible domains and paths
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+      path: "/",
+    });
+    // No domain option if COOKIE_DOMAIN is not set
+    return res.status(200).json({
       message: "Logged out successfully.",
       success: true,
     });
