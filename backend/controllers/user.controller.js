@@ -142,23 +142,10 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
   try {
-    const options = {
-      maxAge: 0,
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-    };
-    res.cookie("token", "", options);
-    console.log(
-      "[LOGOUT] Response headers after clearing cookie:",
-      res.getHeaders()
-    );
-    res.status(200).json({
-      message: "logout successfully",
+    return res.status(200).cookie("token", "", { maxAge: 0 }).json({
+      message: "Logged out successfully.",
       success: true,
     });
-    console.log("[LOGOUT] Response sent, check browser for Set-Cookie header");
-    return;
   } catch (error) {
     console.log(error);
   }
