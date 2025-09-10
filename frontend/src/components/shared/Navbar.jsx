@@ -20,7 +20,7 @@ const Navbar = () => {
   const logoutHandler = async () => {
     try {
       const res = await axios.get(
-        `job-portal-cmjo.vercel.app/api/v1/user/logout`,
+        `https://job-portal-cmjo.vercel.app/api/v1/user/logout`,
         {
           withCredentials: true,
         }

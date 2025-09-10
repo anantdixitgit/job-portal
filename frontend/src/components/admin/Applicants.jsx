@@ -16,7 +16,7 @@ const Applicants = () => {
     const fetchAllApplicants = async () => {
       try {
         const res = await axios.get(
-          `job-portal-cmjo.vercel.app/api/v1/application/${params.id}/applicants`,
+          `https://job-portal-cmjo.vercel.app/api/v1/application/${params.id}/applicants`,
           { withCredentials: true }
         );
         dispatch(setAllApplicants(res.data.job));

@@ -11,7 +11,7 @@ const useGetAppliedJobs = () => {
     const fetchAppliedJobs = async () => {
       try {
         const res = await axios.get(
-          `job-portal-cmjo.vercel.app/api/v1/application/appliedJobs`,
+          `https://job-portal-cmjo.vercel.app/api/v1/application/appliedJobs`,
           { withCredentials: true }
         );
         console.log("value of all applied jobs are :", res);

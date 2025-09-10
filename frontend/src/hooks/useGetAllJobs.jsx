@@ -12,7 +12,7 @@ const useGetAllJobs = () => {
     const fetchAllJobs = async () => {
       try {
         const res = await axios.get(
-          `job-portal-cmjo.vercel.app/api/v1/job/get`,
+          `https://job-portal-cmjo.vercel.app/api/v1/job/get`,
           {
             withCredentials: true,
           }

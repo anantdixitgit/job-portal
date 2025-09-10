@@ -24,7 +24,7 @@ const ApplicantsTable = () => {
     try {
       //axios.defaults.withCredentials = true;
       const res = await axios.post(
-        `job-portal-cmjo.vercel.app/api/v1/application/status/${id}/update`,
+        `https://job-portal-cmjo.vercel.app/api/v1/application/status/${id}/update`,
         { status },
         {
           withCredentials: true,

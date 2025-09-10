@@ -49,7 +49,7 @@ const CompanySetup = () => {
     try {
       setLoading(true);
       const res = await axios.put(
-        `job-portal-cmjo.vercel.app/api/v1/company/update/${params.id}`,
+        `https://job-portal-cmjo.vercel.app/api/v1/company/update/${params.id}`,
         formData,
         {
           headers: {

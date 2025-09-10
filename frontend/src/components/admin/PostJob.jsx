@@ -51,7 +51,7 @@ const PostJob = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "job-portal-cmjo.vercel.app/api/v1/job/post",
+        "https://job-portal-cmjo.vercel.app/api/v1/job/post",
         input,
         {
           headers: {

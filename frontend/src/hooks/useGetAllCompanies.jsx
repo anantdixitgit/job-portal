@@ -10,7 +10,7 @@ const useGetAllCompanies = () => {
     const fetchCompanies = async () => {
       try {
         const res = await axios.get(
-          `job-portal-cmjo.vercel.app/api/v1/company/get`,
+          `https://job-portal-cmjo.vercel.app/api/v1/company/get`,
           { withCredentials: true }
         );
         if (res.data.success) {

@@ -54,7 +54,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `job-portal-cmjo.vercel.app/api/v1/user/profile/update`,
+        `https://job-portal-cmjo.vercel.app/api/v1/user/profile/update`,
         formData,
         {
           headers: {
