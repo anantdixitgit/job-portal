@@ -1,6 +1,6 @@
 # 💼 Job Portal Web Application
 
-🚀 **Live Demo**: [Frontend](https://job-portal-frontend-ht1n.onrender.com/)
+🚀 **Live Demo**: [Frontend](https://job-portal-eight-tawny.vercel.app/)
 
 A full-stack **Job Portal** built with the **MERN stack**, featuring two separate portals for **Recruiters** and **Applicants**. The application supports secure authentication, file uploads (resumes, images, logos), and complete job management functionality.
 
@@ -41,7 +41,7 @@ A full-stack **Job Portal** built with the **MERN stack**, featuring two separat
 
 ## 🌐 Deployment
 
-- **Frontend**: [https://job-portal-frontend.mq47.onrender.com](https://job-portal-frontend-ht1n.onrender.com/)  
+- **Frontend**: [https://job-portal-frontend.mq47.onrender.com](https://job-portal-eight-tawny.vercel.app/)  
 - **Backend**: Deployed separately on Render (private URL or endpoint if not public)
 
 > ⚙️ **Note**: The frontend communicates with the backend via API calls. Make sure CORS and environment variables are configured properly for production.
