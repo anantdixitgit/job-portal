@@ -17,9 +17,8 @@ app.use(cookieParser());
 
 const corsOptions = {
   origin: [
-    "https://job-portal-eight-tawny.vercel.app/",
+    "https://job-portal-eight-tawny.vercel.app",
     "http://localhost:5173",
-    ,
   ],
   credentials: true,
 };
