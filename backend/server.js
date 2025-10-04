@@ -24,6 +24,13 @@ const corsOptions = {
   credentials: true,
 };
 
+app.use("/", (req, res) => {
+  return res.status(200).json({
+    message: "home route added",
+    success: true,
+  });
+});
+
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 5000;
