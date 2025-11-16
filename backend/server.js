@@ -24,13 +24,6 @@ const corsOptions = {
   credentials: true,
 };
 
-app.use("/", (req, res) => {
-  return res.status(200).json({
-    message: "home route added",
-    success: true,
-  });
-});
-
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 5000;
@@ -40,6 +33,13 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/company", companyRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
+
+app.use("/", (req, res) => {
+  return res.status(200).json({
+    message: "home route added",
+    success: true,
+  });
+});
 
 const serverinit = async () => {
   try {
